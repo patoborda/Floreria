@@ -1,3 +1,9 @@
+*{
+ box-sizing: border-box;   
+ margin: 0;
+ padding: 0;  
+}
+
 body, html {
     height: 100%;
 }
@@ -11,17 +17,14 @@ li {
 
 
 /* The hero image */
-main {
-    position: absolute;
-    width: 100%;
-}
+
 body, html {
     height: 100%;
 }
-
+/*<------------------- COMIENZO HEADER------------------->*/
 header {
     position: absolute;
-    background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255,0.05));
+    background: linear-gradient(rgb(179,192,234),rgba(179,192,234,0.5));
     width: 100%;
     z-index: 100;
 
@@ -45,9 +48,93 @@ header {
     font-size: px;
 }
 
+/*<------------------- COMIENZO FOOTER------------------->*/
+.footer {
+    background-color: lightcyan;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+
+    &__redes {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 2rem 2rem;
+        & p {
+            font-weight: 600;
+        }
+        & img {
+            width: 2.5rem;
+            margin: 1rem 0.5rem;
+        }
+        
+    }
+    &__links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    } 
+    
+    &__logo img {
+        width: 10rem;
+        margin-top: 3rem;
+        margin-left: 4rem;
+    }
+    &__newsletter {
+        width: 60%;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0 1rem;
+        &__mail {
+            display: flex;
+            flex-direction: row;
+        }
+        h4 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+    }
+    &__informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__titulo {
+            margin: 1rem auto;
+        }
+        a {
+            margin: 1rem 0 1rem 8rem;
+        }
+        
+    }
+    
+    &__copyright {
+        grid-column: 2/4;
+        margin-top: auto;
+        text-align: center;
+        & p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+/* FIN FOOTER */
+
+
+
 .hero_image {
-  background-image: url("/assets/hero.jpg");
-  height: 80%;
+  background-image: url("/assets/hero4.jpg");
+  height: 90%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,10 +154,9 @@ header {
     &___button {
         padding: 5px 10px;
         border: 0;
-        box-shadow: 2px 5px 15px;
         border-color: white;
         border-radius: 10px;
-        background-color: rgb(198, 180, 238);
+        background-color: rgb(179,192,234);
         transition: 0.5s ease-in-out;
         &:hover {
             transform: scale(1.05);
@@ -78,3 +164,63 @@ header {
     }
   }
 }
+
+/******************** Variedades**********************/
+
+.variedades {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    &__titulo {
+        background-color: rgb(255,255,255);
+        color: rgb(0,0,0);
+        padding: 1rem 0;
+        text-align: center;
+    }
+    &__productos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2rem;
+    }
+    &__boton {
+        background-color: black;
+        align-self: center;
+        margin: 2rem;
+        padding: 1rem 3%; 
+    }
+    a {
+        color: white;
+    }
+}
+
+.carta {
+    width: 15%;
+    height: 600px;
+}
+
+/******************** Tendencia **********************/
+
+.tendencia {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+  /*---------------------- productos.html ----------------------*/
+
+
+#contenedor-productos {
+    position: relative;
+}
+
+
+
+
+
+

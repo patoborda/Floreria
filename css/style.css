@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
 body, html {
   height: 100%; }
 
@@ -8,16 +13,13 @@ li {
   list-style: none; }
 
 /* The hero image */
-main {
-  position: absolute;
-  width: 100%; }
-
 body, html {
   height: 100%; }
 
+/*<------------------- COMIENZO HEADER------------------->*/
 header {
   position: absolute;
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(#b3c0ea, rgba(179, 192, 234, 0.5));
   width: 100%;
   z-index: 100; }
 
@@ -38,9 +40,71 @@ header {
   color: black;
   font-size: px; }
 
+/*<------------------- COMIENZO FOOTER------------------->*/
+.footer {
+  background-color: lightcyan;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .footer__redes {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 2rem 2rem; }
+    .footer__redes p {
+      font-weight: 600; }
+    .footer__redes img {
+      width: 2.5rem;
+      margin: 1rem 0.5rem; }
+  .footer__links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0; }
+  .footer__logo img {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 4rem; }
+  .footer__newsletter {
+    width: 60%;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 1rem; }
+    .footer__newsletter__mail {
+      display: flex;
+      flex-direction: row; }
+    .footer__newsletter h4 {
+      text-align: center;
+      margin: 1rem 0; }
+  .footer__informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .footer__informacion__titulo {
+      margin: 1rem auto; }
+    .footer__informacion a {
+      margin: 1rem 0 1rem 8rem; }
+  .footer__copyright {
+    grid-column: 2/4;
+    margin-top: auto;
+    text-align: center; }
+    .footer__copyright p {
+      font-size: 1rem;
+      font-weight: 600; }
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%; }
+
+/* FIN FOOTER */
 .hero_image {
-  background-image: url("/assets/hero.jpg");
-  height: 80%;
+  background-image: url("/assets/hero4.jpg");
+  height: 90%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,10 +122,49 @@ header {
     .hero_image__text___button {
       padding: 5px 10px;
       border: 0;
-      box-shadow: 2px 5px 15px;
       border-color: white;
       border-radius: 10px;
-      background-color: #c6b4ee;
+      background-color: #b3c0ea;
       transition: 0.5s ease-in-out; }
       .hero_image__text___button:hover {
         transform: scale(1.05); }
+
+/******************** Variedades**********************/
+.variedades {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: pink; }
+  .variedades__titulo {
+    background-color: white;
+    color: black;
+    padding: 1rem 0;
+    text-align: center; }
+  .variedades__productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2rem; }
+  .variedades__boton {
+    background-color: black;
+    align-self: center;
+    margin: 2rem;
+    padding: 1rem 3%; }
+  .variedades a {
+    color: white; }
+
+.carta {
+  width: 15%;
+  height: 600px; }
+
+/******************** Tendencia **********************/
+.tendencia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+/*---------------------- productos.html ----------------------*/
+#contenedor-productos {
+  position: relative; }
